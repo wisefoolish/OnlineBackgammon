@@ -1,0 +1,55 @@
+.Matching
+{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    font-size: 40px;
+    color: #000000;
+    background-color: white;
+    border-width: 0px;
+}
+.Matching:hover    /* 伪类，当鼠标悬停在按钮时的样式 */
+{
+    background-color: #888888;
+}
+
+.ExitMatching
+{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    left: 0px;
+    top: 60px;
+    font-size: 40px;
+    color: #000000;
+    background-color: white;
+    border-width: 0px;
+}
+.ExitMatching:hover    /* 伪类，当鼠标悬停在按钮时的样式 */
+{
+    background-color: #888888;
+}
+
+.InMatching
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    color: #000000;
+    background-color: antiquewhite;
+    border-width: 0px;
+    text-align: center;
+}
+.InMatching::before
+{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}

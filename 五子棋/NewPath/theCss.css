@@ -1,0 +1,316 @@
+/* 类筛选器，设置board类样式，用于渲染类名为board的 */
+.board
+{
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: yellow;
+}
+
+/* 棋盘的每个格子，十字架版 */
+.gridBox
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox::before
+{
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+}
+.gridBox::after{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，左上角 */
+.gridBox_lt
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_lt::before
+{
+    content: "";
+    background-color: black;
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.gridBox_lt::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，右上角 */
+.gridBox_rt
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_rt::before
+{
+    content: "";
+    background-color: black;
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.gridBox_rt::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，左下角 */
+.gridBox_lb
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_lb::before
+{
+    content: "";
+    background-color: black;
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+}
+.gridBox_lb::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，右下角 */
+.gridBox_rb
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_rb::before
+{
+    content: "";
+    background-color: black;
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+}
+.gridBox_rb::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，上边界 */
+.gridBox_nt
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_nt::before
+{
+    content: "";
+    background-color: black;
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.gridBox_nt::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，下边界 */
+.gridBox_nd
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_nd::before
+{
+    content: "";
+    background-color: black;
+    height: 50%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+}
+.gridBox_nd::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，左边界 */
+.gridBox_nl
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_nl::before
+{
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+}
+.gridBox_nl::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* 棋盘的每个格子，右边界 */
+.gridBox_nr
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gridBox_nr::before
+{
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+}
+.gridBox_nr::after
+{
+    content: "";
+    background-color: black;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+}
+
+/* 棋盘监听器，监听每个能放棋子的地方 */
+.listening
+{
+    display: grid;
+    width: 100%;
+    height:100%;
+    grid-template-columns: repeat(15,24px);
+    grid-template-rows: repeat(15,24px);
+}
+
+/* 棋子 */
+.DrawChess
+{
+    border-radius: 50%;
+}
+
+/* 获胜文本 */
+.winner_text
+{
+    position: relative;
+    width: 150px;
+    height: 60px;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%,0%);
+    font-size: 40px;
+    text-align: center;
+}
+
+/* 重置按钮 */
+.reset
+{
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    left: 0%;
+    bottom: 0%;
+    font-size: 40px;
+    color: #000000;
+    background-color: white;
+    border-width: 0px;
+}
+.reset:hover    /* 伪类，当鼠标悬停在按钮时的样式 */
+{
+    background-color: #888888;
+}
+
+.AskThreeHand
+{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+}

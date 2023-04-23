@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入css文件 -->
+    <link rel="stylesheet" href="./theCss.css">
+    <!-- 导入js文件 -->
+    <script src="./theJavascript.js"></script>
+</head>
+<body>
+    <!-- 胜利后展示的文本 -->
+    <div class="winner_text" style="color: aqua;">未开始</div>
+    <!-- 棋盘 -->
+    <div class="board">
+        <!-- 棋盘响应区域，画棋盘的主要标签 -->
+        <div class="listening" id="listeningId"></div>
+    </div>
+    <div class="AskThreeHand" style="display: none;">
+        <div>是否三手交换</div>
+        <button onclick="SendMsg('ThreeHand:'+document.cookie+':'+'true');">是</button>
+        <button onclick="SendMsg('ThreeHand:'+document.cookie+':'+'false');">否</button>
+    </div>
+    <!-- 重置按钮，用于新建游戏 -->
+    <button onclick="Reset()" class="reset">重置</button>
+    <!-- script 标签用于执行script脚本 -->
+    <script>
+        isControlBlack=false;
+        InitBoard();
+    </script>
+</body>
+</html>
